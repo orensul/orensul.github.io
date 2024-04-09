@@ -1,0 +1,29 @@
+[
+  {
+    "authors": [
+      "Oren Sultan",
+      "Dafna Shahaf"
+    ],
+    "categories": null,
+    "content": "",
+    "date": 1698710400,
+    "expirydate": -62135596800,
+    "kind": "page",
+    "lang": "en",
+    "lastmod": 1698710400,
+    "objectID": "798e6ce14b78c9bf2f93fff3db0579da",
+    "permalink": "/publication/life_is_a_circus/",
+    "publishdate": "2022-10-21T00:00:00Z",
+    "relpermalink": "/publication/life_is_a_circus/",
+    "section": "publication",
+    "summary": "",
+    "tags": [
+      "Vanishing Gradients",
+      "Reinforcement Finetuning",
+      "Supervised Finetuning",
+      "Language Models"
+    ],
+    "title": "Life is a Circus and We are the Clowns: Automatically Finding Analogies between Situations and Processes\n",
+    "type": "publication"
+  }
+]
