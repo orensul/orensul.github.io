@@ -11,7 +11,15 @@
       <title>Publications</title>
       <link>/publication/</link>
     </image>
-    
+
+     <item>
+      <title>ParallelPARC: A Scalable Pipeline for Generating Natural-Language Analogies</title>
+      <link>/publication/parallelparc/</link>
+      <pubDate>Sat, 02 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>/publication/parallelparc/</guid>
+      <description></description>
+    </item>
+
     <item>
       <title>Life is a Circus and We are the Clowns: Automatically Finding Analogies between Situations and Processes</title>
       <link>/publication/life_is_a_circus/</link>
