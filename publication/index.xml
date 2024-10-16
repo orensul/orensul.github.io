@@ -12,6 +12,15 @@
       <link>/publication/</link>
     </image>
 
+    <item>
+      <title>Visual Editing with LLM-based Tool Chaining: An Efficient Distillation Approach for Real-Time Applications</title>
+      <link>/publication/AIRecolor/</link>
+      <pubDate>Sat, 03 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>/publication/AIRecolor/</guid>
+      <description></description>
+    </item>
+
+
      <item>
       <title>ParallelPARC: A Scalable Pipeline for Generating Natural-Language Analogies</title>
       <link>/publication/parallelparc/</link>
