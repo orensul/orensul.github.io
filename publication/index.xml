@@ -13,6 +13,14 @@
     </image>
 
     <item>
+      <title>Towards Reliable Proof Generation with LLMs: A Neuro-Symbolic Approach</title>
+      <link>/publication/LLM_proof_generation/</link>
+      <pubDate>Tue, 20 May 2025 00:00:00 +0000</pubDate>
+      <guid>/publication/LLM_proof_generation/</guid>
+      <description></description>
+    </item>
+
+    <item>
       <title>Visual Editing with LLM-based Tool Chaining: An Efficient Distillation Approach for Real-Time Applications</title>
       <link>/publication/AIRecolor/</link>
       <pubDate>Sat, 03 Oct 2024 00:00:00 +0000</pubDate>
