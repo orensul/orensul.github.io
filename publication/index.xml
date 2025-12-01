@@ -12,6 +12,14 @@
       <link>/publication/</link>
     </image>
 
+      <item>
+      <title>CWM: An Open-Weights LLM for Research on Code Generation with World Models</title>
+      <link>/publication/CWM/</link>
+      <pubDate>Tue, 30 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>/publication/CWM/</guid>
+      <description></description>
+    </item>
+
     <item>
       <title>Towards Reliable Proof Generation with LLMs: A Neuro-Symbolic Approach</title>
       <link>/publication/LLM_proof_generation/</link>
