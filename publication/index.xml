@@ -12,6 +12,16 @@
       <link>/publication/</link>
     </image>
 
+     <item>
+      <title>LLMs versus the Halting Problem: Revisiting Program Termination Prediction</title>
+      <link>/publication/LLMsHaltingProblem/</link>
+      <pubDate>Thu, 29 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>/publication/LLMsHaltingProblem/</guid>
+      <description></description>
+    </item>
+
+
+
       <item>
       <title>CWM: An Open-Weights LLM for Research on Code Generation with World Models</title>
       <link>/publication/CWM/</link>
