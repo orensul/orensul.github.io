@@ -1,0 +1,508 @@
+/* ============================================================
+   MODERN OVERRIDE STYLES
+   Layers on top of academic.css without modifying it.
+   ============================================================ */
+
+/* ---------- CSS Variables / Color Palette ---------- */
+:root {
+  --primary: #1e3a5f;
+  --primary-light: #2a5a8f;
+  --accent: #e07a5f;
+  --accent-hover: #c96a50;
+  --bg-main: #fafbfc;
+  --bg-section-alt: #f0f4f8;
+  --bg-card: #ffffff;
+  --text-primary: #1a1a2e;
+  --text-secondary: #4a5568;
+  --text-muted: #718096;
+  --border-light: #e2e8f0;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+  --shadow-md: 0 4px 14px rgba(0,0,0,0.08);
+  --shadow-lg: 0 10px 30px rgba(0,0,0,0.10);
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --transition: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* ---------- Global / Typography ---------- */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+  color: var(--text-primary) !important;
+  background: var(--bg-main) !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6,
+.navbar-brand {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+  font-weight: 700 !important;
+  color: var(--text-primary) !important;
+}
+
+p, li, span, div {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+}
+
+a {
+  color: var(--primary-light) !important;
+  transition: color var(--transition) !important;
+}
+
+a:hover {
+  color: var(--accent) !important;
+  text-decoration: none !important;
+}
+
+/* ---------- Navbar ---------- */
+.navbar {
+  background: rgba(255, 255, 255, 0.82) !important;
+  backdrop-filter: blur(14px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(14px) saturate(180%) !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06) !important;
+  box-shadow: none !important;
+  padding: 0.7rem 0 !important;
+  transition: background var(--transition), box-shadow var(--transition) !important;
+}
+
+.navbar-brand {
+  font-size: 1.3rem !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.02em !important;
+  color: var(--primary) !important;
+}
+
+.navbar .nav-link {
+  font-size: 0.9rem !important;
+  font-weight: 500 !important;
+  color: var(--text-secondary) !important;
+  padding: 0.5rem 1rem !important;
+  border-radius: var(--radius-sm) !important;
+  transition: color var(--transition), background var(--transition) !important;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: var(--primary) !important;
+  background: rgba(30, 58, 95, 0.06) !important;
+}
+
+/* ---------- Sections — General Spacing ---------- */
+.home-section {
+  padding: 80px 0 !important;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.home-section:last-of-type {
+  border-bottom: none;
+}
+
+/* Alternating section backgrounds */
+#news,
+#talks {
+  background: var(--bg-section-alt) !important;
+}
+
+/* Section headings */
+.home-section h1 {
+  font-size: 1.85rem !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.02em !important;
+  margin-bottom: 1.5rem !important;
+  color: var(--text-primary) !important;
+}
+
+.section-heading h1 {
+  font-size: 1.85rem !important;
+  position: sticky;
+  top: 100px;
+}
+
+/* ---------- About / Hero Section ---------- */
+#about {
+  padding-top: 100px !important;
+  padding-bottom: 60px !important;
+  background: linear-gradient(165deg, #f8faff 0%, var(--bg-main) 100%) !important;
+}
+
+#profile {
+  text-align: center;
+}
+
+.avatar.avatar-circle {
+  width: 200px !important;
+  height: 200px !important;
+  border: 4px solid white !important;
+  box-shadow: var(--shadow-lg), 0 0 0 4px rgba(30, 58, 95, 0.08) !important;
+  transition: transform var(--transition), box-shadow var(--transition) !important;
+}
+
+.avatar.avatar-circle:hover {
+  transform: scale(1.03);
+  box-shadow: var(--shadow-lg), 0 0 0 6px rgba(30, 58, 95, 0.12) !important;
+}
+
+.portrait-title h2 {
+  font-size: 1.65rem !important;
+  font-weight: 800 !important;
+  margin-top: 1rem !important;
+  letter-spacing: -0.02em !important;
+}
+
+.portrait-title h3 {
+  font-size: 0.95rem !important;
+  font-weight: 400 !important;
+  color: var(--text-secondary) !important;
+  line-height: 1.6 !important;
+}
+
+/* Social Icons */
+.network-icon {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  gap: 6px !important;
+  margin-top: 1.2rem !important;
+  padding: 0 !important;
+  list-style: none !important;
+}
+
+.network-icon li {
+  list-style: none !important;
+}
+
+.network-icon a {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 42px !important;
+  height: 42px !important;
+  border-radius: 50% !important;
+  background: var(--bg-section-alt) !important;
+  color: var(--text-secondary) !important;
+  font-size: 1.1rem !important;
+  transition: all var(--transition) !important;
+}
+
+.network-icon a:hover {
+  background: var(--primary) !important;
+  color: white !important;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md) !important;
+}
+
+/* Bio text */
+#about .col-12.col-lg-8 p {
+  font-size: 1rem !important;
+  line-height: 1.8 !important;
+  color: var(--text-secondary) !important;
+}
+
+/* ---------- News Section — Timeline ---------- */
+#news ul {
+  list-style: none !important;
+  padding-left: 0 !important;
+  margin-left: 20px !important;
+  border-left: 3px solid var(--primary) !important;
+  position: relative;
+}
+
+#news ul li {
+  padding: 0 0 0.8rem 24px !important;
+  position: relative;
+  margin-bottom: 0 !important;
+}
+
+#news ul li::before {
+  content: '' !important;
+  position: absolute !important;
+  left: -8px !important;
+  top: 8px !important;
+  width: 13px !important;
+  height: 13px !important;
+  border-radius: 50% !important;
+  background: var(--accent) !important;
+  border: 3px solid var(--bg-section-alt) !important;
+  box-shadow: 0 0 0 2px var(--primary) !important;
+}
+
+#news ul li p {
+  margin-bottom: 0.2rem !important;
+  font-size: 0.95rem !important;
+  line-height: 1.6 !important;
+}
+
+#news ul li p strong {
+  color: var(--primary) !important;
+  font-weight: 700 !important;
+}
+
+/* ---------- Publications — Card Layout ---------- */
+.media.stream-item {
+  background: var(--bg-card) !important;
+  border: 1px solid var(--border-light) !important;
+  border-radius: var(--radius-md) !important;
+  padding: 1.5rem !important;
+  margin-bottom: 1.2rem !important;
+  box-shadow: var(--shadow-sm) !important;
+  transition: transform var(--transition), box-shadow var(--transition) !important;
+}
+
+.media.stream-item:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg) !important;
+}
+
+.media.stream-item .media-body > b {
+  font-size: 1.08rem !important;
+  color: var(--text-primary) !important;
+  line-height: 1.5 !important;
+}
+
+.stream-meta {
+  color: var(--text-muted) !important;
+  font-size: 0.88rem !important;
+}
+
+.article-metadata {
+  font-size: 0.88rem !important;
+  color: var(--accent) !important;
+}
+
+.article-metadata b {
+  color: var(--accent) !important;
+  font-weight: 700 !important;
+}
+
+/* Publication thumbnail */
+.media.stream-item .ml-3 img {
+  max-width: 220px !important;
+  border-radius: var(--radius-sm) !important;
+  margin-top: 1rem !important;
+  box-shadow: var(--shadow-sm) !important;
+}
+
+/* ---------- Buttons ---------- */
+.btn-outline-primary,
+.btn.btn-outline-primary {
+  background: var(--primary) !important;
+  color: white !important;
+  border: none !important;
+  border-radius: var(--radius-lg) !important;
+  font-size: 0.8rem !important;
+  font-weight: 600 !important;
+  padding: 0.35rem 1rem !important;
+  transition: all var(--transition) !important;
+  box-shadow: none !important;
+}
+
+.btn-outline-primary:hover,
+.btn.btn-outline-primary:hover {
+  background: var(--primary-light) !important;
+  color: white !important;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm) !important;
+}
+
+.btn-outline-primary.btn-sm,
+.btn.btn-outline-primary.btn-sm {
+  font-size: 0.75rem !important;
+  padding: 0.3rem 0.85rem !important;
+}
+
+/* Btn links row */
+.btn-links {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 6px !important;
+  margin-top: 0.6rem !important;
+}
+
+.btn-links .btn {
+  margin: 0 !important;
+}
+
+/* ---------- Talks Section ---------- */
+#talks ul {
+  list-style: none !important;
+  padding-left: 0 !important;
+}
+
+#talks ul li {
+  padding: 1.2rem 0 !important;
+  border-bottom: 1px solid var(--border-light) !important;
+}
+
+#talks ul li:last-child {
+  border-bottom: none !important;
+}
+
+#talks ul li p {
+  margin-bottom: 0 !important;
+  line-height: 1.7 !important;
+}
+
+#talks ul li p strong {
+  font-size: 1.02rem !important;
+  color: var(--text-primary) !important;
+}
+
+#talks ul li p em {
+  color: var(--text-muted) !important;
+  font-size: 0.92rem !important;
+}
+
+/* ---------- Teaching Section ---------- */
+#teaching ul {
+  list-style: none !important;
+  padding-left: 0 !important;
+}
+
+#teaching ul li {
+  padding: 1rem 0 !important;
+  font-size: 0.98rem !important;
+  line-height: 1.7 !important;
+  color: var(--text-secondary) !important;
+}
+
+/* ---------- Awards Section ---------- */
+#awards ul {
+  list-style: none !important;
+  padding-left: 0 !important;
+}
+
+#awards ul li {
+  padding: 1rem 0 !important;
+  border-bottom: 1px solid var(--border-light) !important;
+}
+
+#awards ul li:last-child {
+  border-bottom: none !important;
+}
+
+#awards ul li p {
+  margin-bottom: 0 !important;
+  line-height: 1.6 !important;
+}
+
+#awards ul li p > strong:first-child {
+  display: inline-block;
+  min-width: 50px;
+  color: var(--accent) !important;
+  font-weight: 700 !important;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  padding: 2rem 0 !important;
+  border-top: 1px solid var(--border-light) !important;
+  margin-top: 0 !important;
+}
+
+.site-footer .powered-by {
+  font-size: 0.85rem !important;
+  color: var(--text-muted) !important;
+}
+
+.back-to-top {
+  color: var(--primary) !important;
+  transition: color var(--transition) !important;
+}
+
+.back-to-top:hover {
+  color: var(--accent) !important;
+}
+
+/* ---------- Modal ---------- */
+.modal-content {
+  border-radius: var(--radius-md) !important;
+  border: none !important;
+  box-shadow: var(--shadow-lg) !important;
+}
+
+.modal-header {
+  border-bottom: 1px solid var(--border-light) !important;
+}
+
+.modal-footer {
+  border-top: 1px solid var(--border-light) !important;
+}
+
+/* ---------- Scroll Animations ---------- */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---------- Selection Color ---------- */
+::selection {
+  background: rgba(30, 58, 95, 0.15);
+  color: var(--text-primary);
+}
+
+/* ---------- Scrollbar (Webkit) ---------- */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-main);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c9d4;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a0aec0;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 991px) {
+  .avatar.avatar-circle {
+    width: 160px !important;
+    height: 160px !important;
+  }
+
+  .home-section {
+    padding: 60px 0 !important;
+  }
+
+  #about {
+    padding-top: 80px !important;
+  }
+
+  .media.stream-item .ml-3 img {
+    max-width: 100% !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .home-section h1 {
+    font-size: 1.5rem !important;
+  }
+
+  .portrait-title h2 {
+    font-size: 1.4rem !important;
+  }
+
+  .media.stream-item {
+    padding: 1rem !important;
+  }
+
+  .btn-links {
+    gap: 4px !important;
+  }
+
+  #news ul {
+    margin-left: 12px !important;
+  }
+}

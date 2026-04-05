@@ -18,8 +18,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
     <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
     <link rel="stylesheet" href="/css/academic.css">
+    <link rel="stylesheet" href="/css/custom.css">
     <!-- Google Analytics disabled
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161891199-1"></script>
     <script>
@@ -115,7 +116,7 @@
             <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2"> </ul>
         </div>
     </nav> <span class="js-widget-page d-none"></span>
-    <section id="about" class="home-section wg-about   " style="padding: 40px 0 0 0;">
+    <section id="about" class="home-section wg-about animate-on-scroll" style="padding: 40px 0 0 0;">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-lg-4">
@@ -156,7 +157,7 @@
 
 
 
-    <section id="news" class="home-section wg-blank   " style="padding: 50px 0 50px 0;">
+    <section id="news" class="home-section wg-blank animate-on-scroll" style="padding: 50px 0 50px 0;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -293,7 +294,7 @@ Generation with World Models </a> 🎉</p>
 
 
 
-    <section id="publications" class="home-section wg-pages   " style="padding: 50px 0 50px 0;">
+    <section id="publications" class="home-section wg-pages animate-on-scroll" style="padding: 50px 0 50px 0;">
 
         <div class="container">
             <div class="row">
@@ -402,7 +403,7 @@ A Case Study in Euclidean Geometry</b>
             </div>
     </section>
 
-    <section id="talks" class="home-section wg-blank   " style="padding: 50px 0 50px 0;">
+    <section id="talks" class="home-section wg-blank animate-on-scroll" style="padding: 50px 0 50px 0;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -447,7 +448,7 @@ A Case Study in Euclidean Geometry</b>
     </section>
 
 
-    <section id="teaching" class="home-section wg-blank   " style="padding: 50px 0 50px 0;">
+    <section id="teaching" class="home-section wg-blank animate-on-scroll" style="padding: 50px 0 50px 0;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -463,7 +464,7 @@ A Case Study in Euclidean Geometry</b>
     </section>
 
 
-    <section id="awards" class="home-section wg-blank   " style="padding: 50px 0 50px 0;">
+    <section id="awards" class="home-section wg-blank animate-on-scroll" style="padding: 50px 0 50px 0;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -529,6 +530,20 @@ A Case Study in Euclidean Geometry</b>
             </div>
         </div>
     </div>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.08 });
+        document.querySelectorAll('.animate-on-scroll').forEach(function(el) {
+            observer.observe(el);
+        });
+    });
+    </script>
 </body>
 
 </html>
