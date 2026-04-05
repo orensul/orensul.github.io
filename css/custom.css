@@ -243,10 +243,11 @@ a:hover {
   background: var(--bg-card) !important;
   border: 1px solid var(--border-light) !important;
   border-radius: var(--radius-md) !important;
-  padding: 1.5rem !important;
+  padding: 0 !important;
   margin-bottom: 1.2rem !important;
   box-shadow: var(--shadow-sm) !important;
   transition: transform var(--transition), box-shadow var(--transition) !important;
+  overflow: hidden !important;
 }
 
 .media.stream-item:hover {
@@ -254,10 +255,61 @@ a:hover {
   box-shadow: var(--shadow-lg) !important;
 }
 
+/* Two-column grid: text left, image right */
+.media.stream-item .media-body {
+  display: grid !important;
+  grid-template-columns: 1fr 240px !important;
+  grid-template-rows: auto !important;
+  align-items: start !important;
+  gap: 0 !important;
+  width: 100% !important;
+}
+
+/* Text content area (title, authors, venue, buttons) */
+.media.stream-item .media-body > b,
+.media.stream-item .media-body > .stream-meta,
+.media.stream-item .media-body > .article-metadata,
+.media.stream-item .media-body > .btn-links {
+  grid-column: 1 !important;
+  padding-left: 1.5rem !important;
+  padding-right: 1rem !important;
+}
+
 .media.stream-item .media-body > b {
   font-size: 1.08rem !important;
   color: var(--text-primary) !important;
   line-height: 1.5 !important;
+  padding-top: 1.5rem !important;
+  display: block !important;
+}
+
+.media.stream-item .media-body > .btn-links {
+  padding-bottom: 1.5rem !important;
+}
+
+/* Image container — fixed size, right column, spans all rows */
+.media.stream-item .media-body > .ml-3 {
+  grid-column: 2 !important;
+  grid-row: 1 / -1 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 240px !important;
+  height: 100% !important;
+  min-height: 200px !important;
+  overflow: hidden !important;
+  background: var(--bg-section-alt) !important;
+}
+
+.media.stream-item .ml-3 img {
+  width: 240px !important;
+  height: 100% !important;
+  min-height: 200px !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  display: block !important;
+  border-radius: 0 !important;
+  margin: 0 !important;
+  box-shadow: none !important;
 }
 
 .stream-meta {
@@ -273,14 +325,6 @@ a:hover {
 .article-metadata b {
   color: var(--accent) !important;
   font-weight: 700 !important;
-}
-
-/* Publication thumbnail */
-.media.stream-item .ml-3 img {
-  max-width: 220px !important;
-  border-radius: var(--radius-sm) !important;
-  margin-top: 1rem !important;
-  box-shadow: var(--shadow-sm) !important;
 }
 
 /* ---------- Buttons ---------- */
@@ -480,8 +524,28 @@ a:hover {
     padding-top: 80px !important;
   }
 
+  /* Stack publication cards vertically on tablets */
+  .media.stream-item .media-body {
+    grid-template-columns: 1fr !important;
+  }
+
+  .media.stream-item .media-body > .ml-3 {
+    grid-column: 1 !important;
+    grid-row: auto !important;
+    width: 100% !important;
+    height: 200px !important;
+    min-height: 200px !important;
+    order: -1 !important;
+  }
+
   .media.stream-item .ml-3 img {
-    max-width: 100% !important;
+    width: 100% !important;
+    height: 200px !important;
+    min-height: 200px !important;
+  }
+
+  .media.stream-item .media-body > b {
+    padding-top: 1rem !important;
   }
 }
 
@@ -492,10 +556,6 @@ a:hover {
 
   .portrait-title h2 {
     font-size: 1.4rem !important;
-  }
-
-  .media.stream-item {
-    padding: 1rem !important;
   }
 
   .btn-links {
