@@ -239,92 +239,69 @@ a:hover {
 }
 
 /* ---------- Publications — Card Layout ---------- */
-.media.stream-item {
-  background: var(--bg-card) !important;
-  border: 1px solid var(--border-light) !important;
-  border-radius: var(--radius-md) !important;
-  padding: 0 !important;
-  margin-bottom: 1.2rem !important;
-  box-shadow: var(--shadow-sm) !important;
-  transition: transform var(--transition), box-shadow var(--transition) !important;
-  overflow: hidden !important;
+.pub-card {
+  display: flex;
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  margin-bottom: 1.2rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition), box-shadow var(--transition);
 }
 
-.media.stream-item:hover {
+.pub-card:hover {
   transform: translateY(-3px);
-  box-shadow: var(--shadow-lg) !important;
+  box-shadow: var(--shadow-lg);
 }
 
-/* Two-column grid: text left, image right */
-.media.stream-item .media-body {
-  display: grid !important;
-  grid-template-columns: 1fr 240px !important;
-  grid-template-rows: auto !important;
-  align-items: start !important;
-  gap: 0 !important;
-  width: 100% !important;
+.pub-text {
+  flex: 1;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
 }
 
-/* Text content area (title, authors, venue, buttons) */
-.media.stream-item .media-body > b,
-.media.stream-item .media-body > .stream-meta,
-.media.stream-item .media-body > .article-metadata,
-.media.stream-item .media-body > .btn-links {
-  grid-column: 1 !important;
-  padding-left: 1.5rem !important;
-  padding-right: 1rem !important;
+.pub-title {
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.5;
+  margin-bottom: 0.4rem;
 }
 
-.media.stream-item .media-body > b {
-  font-size: 1.08rem !important;
-  color: var(--text-primary) !important;
-  line-height: 1.5 !important;
-  padding-top: 1.5rem !important;
-  display: block !important;
+.pub-authors {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 0.25rem;
 }
 
-.media.stream-item .media-body > .btn-links {
-  padding-bottom: 1.5rem !important;
+.pub-venue {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 0.6rem;
 }
 
-/* Image container — fixed size, right column, spans all rows */
-.media.stream-item .media-body > .ml-3 {
-  grid-column: 2 !important;
-  grid-row: 1 / -1 !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  width: 240px !important;
-  height: 100% !important;
-  min-height: 200px !important;
-  overflow: hidden !important;
-  background: var(--bg-section-alt) !important;
+.pub-image {
+  flex: 0 0 260px;
+  width: 260px;
+  background: var(--bg-section-alt);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
-.media.stream-item .ml-3 img {
-  width: 240px !important;
-  height: 100% !important;
-  min-height: 200px !important;
-  object-fit: cover !important;
-  object-position: center !important;
-  display: block !important;
-  border-radius: 0 !important;
-  margin: 0 !important;
-  box-shadow: none !important;
-}
-
-.stream-meta {
-  color: var(--text-muted) !important;
-  font-size: 0.88rem !important;
-}
-
-.article-metadata {
-  font-size: 0.88rem !important;
-  color: var(--accent) !important;
-}
-
-.article-metadata b {
-  color: var(--accent) !important;
-  font-weight: 700 !important;
+.pub-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
 
 /* ---------- Buttons ---------- */
@@ -525,27 +502,15 @@ a:hover {
   }
 
   /* Stack publication cards vertically on tablets */
-  .media.stream-item .media-body {
-    grid-template-columns: 1fr !important;
+  .pub-card {
+    flex-direction: column;
   }
 
-  .media.stream-item .media-body > .ml-3 {
-    grid-column: 1 !important;
-    grid-row: auto !important;
-    width: 100% !important;
-    height: 200px !important;
-    min-height: 200px !important;
-    order: -1 !important;
-  }
-
-  .media.stream-item .ml-3 img {
-    width: 100% !important;
-    height: 200px !important;
-    min-height: 200px !important;
-  }
-
-  .media.stream-item .media-body > b {
-    padding-top: 1rem !important;
+  .pub-image {
+    flex: 0 0 200px;
+    width: 100%;
+    height: 200px;
+    order: -1;
   }
 }
 
