@@ -730,6 +730,7 @@ a:hover {
   border-left: 4px solid var(--gold) !important;
   border-radius: var(--radius-sm);
   padding: 1.2rem 1.5rem !important;
+  margin-bottom: 0.9rem !important;
   font-size: 0.98rem !important;
   line-height: 1.75 !important;
   color: var(--text-2) !important;
