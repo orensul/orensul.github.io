@@ -473,6 +473,63 @@ a:hover {
   margin-top: 2px;
 }
 
+/* Experience list with company logos */
+.exp-list {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.exp-list li {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 0.6rem 0 !important;
+  border-bottom: 1px dashed var(--line);
+}
+
+.exp-list li:last-child {
+  border-bottom: none;
+}
+
+.exp-logo {
+  flex: 0 0 38px;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+}
+
+.exp-logo img {
+  max-width: 24px;
+  max-height: 24px;
+  object-fit: contain;
+}
+
+.exp-body {
+  min-width: 0;
+}
+
+.exp-org {
+  display: block;
+  font-size: 0.92rem !important;
+  font-weight: 600 !important;
+  color: var(--text) !important;
+  line-height: 1.45;
+}
+
+.exp-body small {
+  display: block;
+  font-size: 0.82rem !important;
+  color: var(--muted) !important;
+  margin-top: 2px;
+}
+
 /* ---------- News — Timeline ---------- */
 #news ul {
   list-style: none !important;
