@@ -450,6 +450,9 @@ a:hover {
 }
 
 .edu-list li {
+  display: flex;
+  align-items: center;
+  gap: 13px;
   padding: 0.55rem 0 !important;
   border-bottom: 1px dashed var(--line);
 }
@@ -458,7 +461,30 @@ a:hover {
   border-bottom: none;
 }
 
-.edu-list li span {
+.edu-logo {
+  flex: 0 0 38px;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+}
+
+.edu-logo img {
+  max-width: 24px;
+  max-height: 24px;
+  object-fit: contain;
+}
+
+.edu-body {
+  min-width: 0;
+}
+
+.edu-body span {
   display: block;
   font-size: 0.92rem !important;
   font-weight: 600 !important;
@@ -466,7 +492,7 @@ a:hover {
   line-height: 1.45;
 }
 
-.edu-list li small {
+.edu-body small {
   display: block;
   font-size: 0.82rem !important;
   color: var(--muted) !important;
