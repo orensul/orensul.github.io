@@ -1,5 +1,10 @@
 {
-  "citations_per_year": {},
+  "citations_per_year": {
+    "2023": 15,
+    "2024": 24,
+    "2025": 44,
+    "2026": 70
+  },
   "h_index": 5,
   "i10_index": 4,
   "scholar_id": "Ns91gt4AAAAJ",
