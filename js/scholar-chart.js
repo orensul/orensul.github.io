@@ -44,15 +44,16 @@
       var barWrap = document.createElement("div");
       barWrap.className = "scholar-bar-wrap";
 
-      var count = document.createElement("span");
-      count.className = "scholar-bar-count";
-      count.textContent = e.count;
-      barWrap.appendChild(count);
-
       var bar = document.createElement("div");
       bar.className = "scholar-bar";
       bar.style.height = (Math.round((e.count / max) * 100)) + "%";
       bar.setAttribute("title", e.year + ": " + e.count + " citations");
+
+      var count = document.createElement("span");
+      count.className = "scholar-bar-count";
+      count.textContent = e.count;
+      bar.appendChild(count);
+
       barWrap.appendChild(bar);
 
       col.appendChild(barWrap);
