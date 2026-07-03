@@ -701,6 +701,14 @@ a:hover {
   opacity: 0.9;
 }
 
+.pub-affil img[alt="HUJI"] {
+  height: 34px;
+}
+
+.pub-affil img[alt="AI2"] {
+  height: 20px;
+}
+
 .pub-venue {
   display: inline-block;
   align-self: flex-start;
