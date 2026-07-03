@@ -685,6 +685,22 @@ a:hover {
   font-weight: 600;
 }
 
+.pub-affil {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.6rem;
+}
+
+.pub-affil img {
+  height: 26px;
+  width: auto;
+  max-width: 100px;
+  object-fit: contain;
+  opacity: 0.9;
+}
+
 .pub-venue {
   display: inline-block;
   align-self: flex-start;
