@@ -543,10 +543,17 @@ a:hover {
 
 .cv-role {
   display: block;
-  font-size: 0.84rem !important;
+  font-size: 0.8rem !important;
   color: var(--text-2) !important;
   margin-top: 2px;
   line-height: 1.45;
+  white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+  .cv-role {
+    white-space: normal;
+  }
 }
 
 .cv-note {
