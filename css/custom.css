@@ -449,109 +449,102 @@ a:hover {
   background: var(--gold);
 }
 
-.edu-list li {
+/* CV timelines (experience & education) with logos on a vertical line */
+.cv-timeline {
+  position: relative;
+}
+
+.cv-item {
+  position: relative;
   display: flex;
-  align-items: center;
-  gap: 13px;
-  padding: 0.55rem 0 !important;
-  border-bottom: 1px dashed var(--line);
+  align-items: flex-start;
+  gap: 14px;
+  padding-bottom: 1.15rem;
 }
 
-.edu-list li:last-child {
-  border-bottom: none;
+.cv-item:last-child {
+  padding-bottom: 0;
 }
 
-.edu-logo {
-  flex: 0 0 38px;
-  width: 38px;
-  height: 38px;
+.cv-item::before {
+  content: '';
+  position: absolute;
+  left: 21px;
+  top: 44px;
+  bottom: -2px;
+  width: 2px;
+  background: var(--line-strong);
+}
+
+.cv-item:last-child::before {
+  display: none;
+}
+
+.cv-logo {
+  position: relative;
+  z-index: 1;
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
   background: #fff;
-  border: 1px solid var(--line);
-  border-radius: var(--radius-sm);
+  border: 1px solid var(--line-strong);
+  border-radius: 50%;
   box-shadow: var(--shadow-sm);
 }
 
-.edu-logo img {
-  max-width: 24px;
-  max-height: 24px;
+.cv-logo img {
+  max-width: 26px;
+  max-height: 26px;
   object-fit: contain;
 }
 
-.edu-body {
+.cv-body {
   min-width: 0;
+  padding-top: 1px;
 }
 
-.edu-body span {
+.cv-date {
+  display: inline-block;
+  font-size: 0.68rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink) !important;
+  background: rgba(214, 178, 94, 0.28);
+  border-radius: var(--radius-pill);
+  padding: 0.12rem 0.6rem;
+  margin-bottom: 0.32rem;
+}
+
+.cv-org {
   display: block;
-  font-size: 0.92rem !important;
+  font-size: 0.93rem !important;
   font-weight: 600 !important;
-  color: var(--text) !important;
-  line-height: 1.45;
+  line-height: 1.4;
 }
 
-.edu-body small {
+.cv-org a {
+  color: var(--text) !important;
+}
+
+.cv-org a:hover {
+  color: var(--gold-deep) !important;
+}
+
+.cv-role {
   display: block;
-  font-size: 0.82rem !important;
-  color: var(--muted) !important;
+  font-size: 0.84rem !important;
+  color: var(--text-2) !important;
   margin-top: 2px;
-}
-
-/* Experience list with company logos */
-.exp-list {
-  list-style: none !important;
-  padding: 0 !important;
-  margin: 0 !important;
-}
-
-.exp-list li {
-  display: flex;
-  align-items: center;
-  gap: 13px;
-  padding: 0.6rem 0 !important;
-  border-bottom: 1px dashed var(--line);
-}
-
-.exp-list li:last-child {
-  border-bottom: none;
-}
-
-.exp-logo {
-  flex: 0 0 38px;
-  width: 38px;
-  height: 38px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #fff;
-  border: 1px solid var(--line);
-  border-radius: var(--radius-sm);
-  box-shadow: var(--shadow-sm);
-}
-
-.exp-logo img {
-  max-width: 24px;
-  max-height: 24px;
-  object-fit: contain;
-}
-
-.exp-body {
-  min-width: 0;
-}
-
-.exp-org {
-  display: block;
-  font-size: 0.92rem !important;
-  font-weight: 600 !important;
-  color: var(--text) !important;
   line-height: 1.45;
 }
 
-.exp-body small {
+.cv-note {
   display: block;
-  font-size: 0.82rem !important;
+  font-size: 0.78rem !important;
   color: var(--muted) !important;
   margin-top: 2px;
 }
