@@ -412,12 +412,19 @@ a:hover {
 
 .about-card h4 {
   font-family: var(--sans) !important;
-  font-size: 0.8rem !important;
+  font-size: 0.74rem !important;
   font-weight: 700 !important;
-  letter-spacing: 0.14em !important;
+  letter-spacing: 0.08em !important;
   text-transform: uppercase;
   color: var(--ink) !important;
   margin-bottom: 1rem !important;
+  white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+  .about-card h4 {
+    white-space: normal;
+  }
 }
 
 .about-card h4 i {
